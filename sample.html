@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jstree basic demos</title>
+	<link rel="stylesheet" href="style.min.css" />
+</head>
+<body>
+
+
+
+	<div id="tree-view" style="direction: rtl; margin:auto; background-color: #ddd; width:400px;" >
+		<ul>
+			<li data-jstree='{ "opened" : true }'>Root node
+				<ul>
+					<li data-jstree='{ "selected" : true }'>Child node 1</li>
+					<li>Child node 2
+						<ul>
+							<li data-jstree='{"opened":true}'>Child node 1</li>
+							<li>Child node 2</li>
+						</ul>
+				</li>
+				</ul>
+			</li>
+
+			<li data-jstree='{ "opened" : true }'>Root node
+				<ul>
+					<li >Child node 1</li>
+					<li>Child node 2
+						<ul>
+							<li data-jstree='{"opened":true}'>Child node 1</li>
+							<li>Child node 2</li>
+						</ul>
+				</li>
+				</ul>
+			</li>
+
+
+		</ul>
+	</div>
+
+
+
+	<script src="jquery.min.js"></script>
+	<script src="jstree.min.js"></script>
+	
+	<script>
+	// html demo
+	$.jstree.defaults.core.themes.variant = "large";
+	$.jstree.defaults.core.themes.icons = false;
+		// $.jstree.defaults.core.themes.dots = false;
+	$.jstree.defaults.core.themes.stripes = true;
+
+	$('#tree-view').jstree();
+	</script>
+</body>
+</html>
